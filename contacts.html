@@ -8,7 +8,8 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-ZHD871546S');
+    // Режим отладки для DebugView: ссылка с ?debug_mode=1
+    gtag('config', 'G-ZHD871546S', /[?&]debug_mode=1/.test(location.search) ? {debug_mode: true} : {});
   </script>
 
   <meta charset="utf-8">

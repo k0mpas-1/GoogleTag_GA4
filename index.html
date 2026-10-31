@@ -2,13 +2,14 @@
 <html lang="ru">
 <head>
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZHD871546S"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-ZHD871546S');
+    // Режим отладки для DebugView: ссылка с ?debug_mode=1
+    gtag('config', 'G-ZHD871546S', /[?&]debug_mode=1/.test(location.search) ? {debug_mode: true} : {});
   </script>
 
   <!-- На занятии вставьте Google Tag сразу после открывающего head. -->
@@ -18,6 +19,7 @@
   <title>Home — GA4 Lab</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
+  <script src="js/metrics.js" defer></script>
 </head>
 <body>
   <header><a class="brand" href="index.html">GA4<span>LAB</span></a><nav aria-label="Основная навигация"><a href="index.html" aria-current="page">Home</a><a href="about.html">About</a><a href="contacts.html">Contacts</a></nav></header>
